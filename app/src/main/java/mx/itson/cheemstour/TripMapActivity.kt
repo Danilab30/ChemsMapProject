@@ -96,16 +96,33 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
                 if (weather != null) {
                     val descripcion = weather.weather?.firstOrNull()?.description ?: "Sin descripción"
                     //es una lista de objetos que viene en el json, si el primer elemento no es nulo se obtiene la descripcion
+
+
+
                     val temperatura = weather.main?.temp ?: 0.0
-                    //el weather.main accede a los valores de temp en dado caso que sea null da como valor 0.0
+                    val sensacion = weather.main?.feels_like ?: 0.0
+                    val tempMin = weather.main?.temp_min ?: 0.0
+                    val tempMax = weather.main?.temp_max ?: 0.0
+                    val presion = weather.main?.pressure ?: 0
+                    val humedad = weather.main?.humidity ?: 0
 
 
 
-                    val mensaje = "Lugar: $nombreLugar\n" +
-                            "Descripción: $descripcion\n" +
-                            "Temperatura: ${"%.1f".format(temperatura)}°C"
 
-                    //es un texto para el usuario en el muestra el nombre del lugar, la descripcion y la temperatura
+                    val mensaje = """
+                        Lugar: $nombreLugar
+                        Descripción: ${descripcion.replaceFirstChar { it.uppercase() }}
+                        Temp. actual: ${"%.1f".format(temperatura)}°C
+                        Sensación térmica: ${"%.1f".format(sensacion)}°C
+                        Temp. mín: ${"%.1f".format(tempMin)}°C
+                        Temp. máx: ${"%.1f".format(tempMax)}°C
+                        Presión: $presion hPa
+                        Humedad: $humedad%
+                        """.trimIndent()
+
+
+                    //trimIndent() hace que el mensaje del clima se muestre sin espacio
+                    //es un texto para el usuario vea el mensaje de clima
                     //el %.1f es para que muestre solo 1 decimal
 
                     androidx.appcompat.app.AlertDialog.Builder(this@TripMapActivity)
