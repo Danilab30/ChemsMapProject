@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Cheems Tour</string>
+    <string name="text_name">Name:</string>
+    <string name="text_city">City:</string>
+    <string name="text_country">Country:</string>
+    <string name="text_save">Save</string>
+    <string name="text_saved_successful">Trip saved successfully</string>
+    <string name="text_saved_error">Error saving trip</string>
+    <string name="text_button_list">Trips list</string>
+    <string name="text_button_new">New Trip</string>
+    <string name="text_button_map">Map Trip</string>
+</resources>
