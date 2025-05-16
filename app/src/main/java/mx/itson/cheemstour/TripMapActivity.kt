@@ -129,18 +129,10 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
                         .setPositiveButton(getString(R.string.accept), null)
                         .show()
 
-
-
-
                     //trimIndent() hace que el mensaje del clima se muestre sin espacio
                     //es un texto para el usuario vea el mensaje de clima
                     //el %.1f es para que muestre solo 1 decimal
 
-                    androidx.appcompat.app.AlertDialog.Builder(this@TripMapActivity)
-                        .setTitle("Información del clima")
-                        .setMessage(mensaje)
-                        .setPositiveButton("Aceptar", null)
-                        .show()
                 } else {
                     Toast.makeText(this@TripMapActivity, "No se pudo obtener el clima.", Toast.LENGTH_SHORT).show()
                 }
