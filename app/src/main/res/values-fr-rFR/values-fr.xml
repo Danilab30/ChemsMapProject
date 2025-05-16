@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Cheems Tour</string>
+    <string name="text_name">Nom:</string>
+    <string name="text_city">Ville:</string>
+    <string name="text_country">Pays:</string>
+    <string name="text_save">Sauvegarder</string>
+    <string name="text_saved_successful">Voyage enregistré avec succès</string>
+    <string name="text_saved_error">Erreur lors de lenregistrement du voyag</string>
+    <string name="text_button_list">Liste des voyages</string>
+    <string name="text_button_new">Nouveau voyage</string>
+    <string name="text_button_map">Carte Voyage</string>
+    <string name="weather_title">Informazioni meteorologiche</string>
+    <string name="place">Posto</string>
+    <string name="description">Descrizione</string>
+    <string name="temperature">Temperatura</string>
+    <string name="feels_like">Sembra</string>
+    <string name="temp_min">Temperatura minima</string>
+    <string name="temp_max">Temperatura massima</string>
+    <string name="pressure">Pressione</string>
+    <string name="humidity">Umidità</string>
+    <string name="accept">OK</string>
+</resources>
