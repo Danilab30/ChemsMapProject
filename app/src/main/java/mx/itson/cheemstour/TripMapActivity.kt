@@ -19,6 +19,7 @@ import mx.itson.cheemstour.utils.RetrofitUtil
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import androidx.appcompat.app.AlertDialog
 
 class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -84,8 +85,10 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
     }
 
     fun obtenerClimaDesdeLatLng(lat: Double, lon: Double, nombreLugar: String?) { //parametros de entrada latitud y longitud junto con el nombre del lugar
+
+        val idioma = java.util.Locale.getDefault().language
         val call: Call<Weather> = RetrofitUtil.getApiWeather()!!
-            .getWeather(lat, lon, "9ebf4ea47131a883ab8a265189f58ef7")
+            .getWeather(lat, lon, "9ebf4ea47131a883ab8a265189f58ef7", idioma)
             //llamada a la API key y la latitud y longitud
 
         call.enqueue(object : Callback<Weather> { //ejecuta la petición
@@ -110,15 +113,23 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
                     val mensaje = """
-                        Lugar: $nombreLugar
-                        Descripción: ${descripcion.replaceFirstChar { it.uppercase() }}
-                        Temp. actual: ${"%.1f".format(temperatura)}°C
-                        Sensación térmica: ${"%.1f".format(sensacion)}°C
-                        Temp. mín: ${"%.1f".format(tempMin)}°C
-                        Temp. máx: ${"%.1f".format(tempMax)}°C
-                        Presión: $presion hPa
-                        Humedad: $humedad%
+                        ${getString(R.string.place)}: $nombreLugar
+                        ${getString(R.string.description)}: ${weather.weather?.firstOrNull()?.description ?: "-"}
+                        ${getString(R.string.temperature)}: ${"%.1f".format(temperatura)}°C
+                        ${getString(R.string.feels_like)}: ${"%.1f".format(sensacion)}°C
+                        ${getString(R.string.temp_min)}: ${"%.1f".format(tempMin)}°C
+                        ${getString(R.string.temp_max)}: ${"%.1f".format(tempMax)}°C
+                        ${getString(R.string.pressure)}: $presion hPa
+                        ${getString(R.string.humidity)}: $humedad%
                         """.trimIndent()
+
+                    AlertDialog.Builder(this@TripMapActivity)
+                        .setTitle(getString(R.string.weather_title))
+                        .setMessage(mensaje)
+                        .setPositiveButton(getString(R.string.accept), null)
+                        .show()
+
+
 
 
                     //trimIndent() hace que el mensaje del clima se muestre sin espacio

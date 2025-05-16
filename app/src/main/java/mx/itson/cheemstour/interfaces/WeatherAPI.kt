@@ -12,6 +12,7 @@ interface WeatherAPI {
         @Query("lat") lat: Double,
         @Query("lon") lon: Double,
         @Query("appid") appid: String,
+        @Query("lang") lang: String,
         @Query("units") units: String = "metric" //esto servira para que se muestre los valores en Celsius y no en Kelvin
     ): Call<Weather>
 }

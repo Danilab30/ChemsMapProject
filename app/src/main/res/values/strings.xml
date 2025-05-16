@@ -9,4 +9,14 @@
     <string name="text_button_list">Trips list</string>
     <string name="text_button_new">New Trip</string>
     <string name="text_button_map">Map Trip</string>
+    <string name="weather_title">Weather Information</string>
+    <string name="place">Place</string>
+    <string name="description">Description</string>
+    <string name="temperature">Temperature</string>
+    <string name="feels_like">Feels Like</string>
+    <string name="temp_min">Minimum Temperature</string>
+    <string name="temp_max">Maximum Temperature</string>
+    <string name="pressure">Pressure</string>
+    <string name="humidity">Humidity</string>
+    <string name="accept">OK</string>
 </resources>
