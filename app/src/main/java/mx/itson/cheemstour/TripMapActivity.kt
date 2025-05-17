@@ -1,6 +1,11 @@
 package mx.itson.cheemstour
 
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -97,6 +102,7 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
                 //se obtiene el objeto Weather de la respuesta que la descripcion del clima, la temperatura se obtiene en kelvin
 
                 if (weather != null) {
+                    vibrate(300)
                     val descripcion = weather.weather?.firstOrNull()?.description ?: "Sin descripción"
                     //es una lista de objetos que viene en el json, si el primer elemento no es nulo se obtiene la descripcion
 
@@ -113,20 +119,20 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
                     val mensaje = """
-                        ${getString(R.string.place)}: $nombreLugar
-                        ${getString(R.string.description)}: ${weather.weather?.firstOrNull()?.description ?: "-"}
-                        ${getString(R.string.temperature)}: ${"%.1f".format(temperatura)}°C
-                        ${getString(R.string.feels_like)}: ${"%.1f".format(sensacion)}°C
-                        ${getString(R.string.temp_min)}: ${"%.1f".format(tempMin)}°C
-                        ${getString(R.string.temp_max)}: ${"%.1f".format(tempMax)}°C
-                        ${getString(R.string.pressure)}: $presion hPa
-                        ${getString(R.string.humidity)}: $humedad%
+                        ${getString(R.string.text_place)}: $nombreLugar
+                        ${getString(R.string.text_description)}: ${weather.weather?.firstOrNull()?.description ?: "-"}
+                        ${getString(R.string.text_temperature)}: ${"%.1f".format(temperatura)}°C
+                        ${getString(R.string.text_feels_like)}: ${"%.1f".format(sensacion)}°C
+                        ${getString(R.string.text_temp_min)}: ${"%.1f".format(tempMin)}°C
+                        ${getString(R.string.text_temp_max)}: ${"%.1f".format(tempMax)}°C
+                        ${getString(R.string.text_pressure)}: $presion hPa
+                        ${getString(R.string.text_humidity)}: $humedad%
                         """.trimIndent()
 
                     AlertDialog.Builder(this@TripMapActivity)
-                        .setTitle(getString(R.string.weather_title))
+                        .setTitle(getString(R.string.text_weather_title))
                         .setMessage(mensaje)
-                        .setPositiveButton(getString(R.string.accept), null)
+                        .setPositiveButton(getString(R.string.text_accept), null)
                         .show()
 
                     //trimIndent() hace que el mensaje del clima se muestre sin espacio
@@ -134,7 +140,7 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
                     //el %.1f es para que muestre solo 1 decimal
 
                 } else {
-                    Toast.makeText(this@TripMapActivity, "No se pudo obtener el clima.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@TripMapActivity, getText(R.string.text_weather_error), Toast.LENGTH_SHORT).show()
                 }
             }
 
@@ -142,5 +148,16 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
                 Toast.makeText(this@TripMapActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    private fun vibrate(duration: Long) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vibratorManager = getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            val vibrator = vibratorManager.defaultVibrator
+            vibrator.vibrate(VibrationEffect.createOneShot(duration, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            vibrator.vibrate(duration)
+        }
     }
 }

@@ -9,14 +9,14 @@
     <string name="text_button_list">Elenco viaggi</string>
     <string name="text_button_new">nuovo viaggio</string>
     <string name="text_button_map">Viaggio sulla mappa</string>
-    <string name="weather_title">Informazioni meteorologiche</string>
-    <string name="place">Posto</string>
-    <string name="description">Descrizione</string>
-    <string name="temperature">Temperatura</string>
-    <string name="feels_like">Sembra</string>
-    <string name="temp_min">Temperatura minima</string>
-    <string name="temp_max">Temperatura massima</string>
-    <string name="pressure">Pressione</string>
-    <string name="humidity">Umidità</string>
-    <string name="accept">OK</string>
+    <string name="text_weather_title">Informazioni meteorologiche</string>
+    <string name="text_place">Posto</string>
+    <string name="text_description">Descrizione</string>
+    <string name="text_temperature">Temperatura</string>
+    <string name="text_feels_like">Sembra</string>
+    <string name="text_temp_min">Temperatura minima</string>
+    <string name="text_temp_max">Temperatura massima</string>
+    <string name="text_pressure">Pressione</string>
+    <string name="text_humidity">Umidità</string>
+    <string name="text_accept">OK</string>
 </resources>

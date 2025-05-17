@@ -89,17 +89,7 @@ class TripFormActivity : AppCompatActivity(), View.OnClickListener, OnMapReadyCa
                         startActivity(intentMain)
 
                         Toast.makeText(context,getString(R.string.text_saved_successful),Toast.LENGTH_LONG).show()
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                            val vibratorAdmin =
-                                applicationContext.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
-                            val vibrator = vibratorAdmin.defaultVibrator
-                            vibrator.vibrate(
-                                VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE)
-                            )
-                        } else {
-                            val vibrator = applicationContext.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-                            vibrator.vibrate(1000)
-                        }
+                        vibrate(500)
                     } else {
                         Toast.makeText(context,getString(R.string.text_saved_error),Toast.LENGTH_LONG).show()
                     }
@@ -131,6 +121,8 @@ class TripFormActivity : AppCompatActivity(), View.OnClickListener, OnMapReadyCa
             override fun onMarkerDragEnd(marker: Marker) {
                 latitude = marker.position.latitude
                 longitude = marker.position.longitude
+                vibrate(150)
+                Toast.makeText(this@TripFormActivity, getString(R.string.text_marker_set), Toast.LENGTH_SHORT).show()
             }
 
             override fun onMarkerDragStart(p0: Marker) {
@@ -140,4 +132,16 @@ class TripFormActivity : AppCompatActivity(), View.OnClickListener, OnMapReadyCa
         })
 
     }
+
+    private fun vibrate(duration: Long) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vibratorManager = getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+            val vibrator = vibratorManager.defaultVibrator
+            vibrator.vibrate(VibrationEffect.createOneShot(duration, VibrationEffect.DEFAULT_AMPLITUDE))
+        } else {
+            val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
+            vibrator.vibrate(duration)
+        }
+    }
+
 }

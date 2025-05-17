@@ -9,14 +9,15 @@
     <string name="text_button_list">Lista de Viaje</string>
     <string name="text_button_new">Nuevo Viaje</string>
     <string name="text_button_map">Mapa de Viaje</string>
-    <string name="weather_title">Informacion del Clima</string>
-    <string name="place">Lugar</string>
-    <string name="description">Descripcion</string>
-    <string name="temperature">Temperatura</string>
-    <string name="feels_like">Sensacion</string>
-    <string name="temp_min">Minima Temperatura</string>
-    <string name="temp_max">Maxima Temperatura</string>
-    <string name="pressure">Presion</string>
-    <string name="humidity">humedad</string>
-    <string name="accept">OK</string>
+    <string name="text_weather_title">Informacion del Clima</string>
+    <string name="text_place">Lugar</string>
+    <string name="text_description">Descripcion</string>
+    <string name="text_temperature">Temperatura</string>
+    <string name="text_feels_like">Sensacion</string>
+    <string name="text_temp_min">Minima Temperatura</string>
+    <string name="text_temp_max">Maxima Temperatura</string>
+    <string name="text_pressure">Presion</string>
+    <string name="text_humidity">humedad</string>
+    <string name="text_accept">OK</string>
+
 </resources>
