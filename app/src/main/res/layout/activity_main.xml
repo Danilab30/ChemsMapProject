@@ -6,30 +6,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingStart="35dp"
-    android:paddingTop="35dp"
-    android:paddingEnd="35dp"
-    android:paddingBottom="35dp"
+    android:padding="35dp"
+    android:background="#F5F5F5"
     tools:context=".MainActivity">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_trip_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/text_button_list"/>
+        android:text="@string/text_button_list"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#2196F3"
+        android:cornerRadius="24dp"
+        android:elevation="4dp"
+        android:padding="16dp"
+     />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_trip_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/text_button_new"/>
+        android:text="@string/text_button_new"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#2196F3"
+        android:cornerRadius="24dp"
+        android:elevation="4dp"
+        android:padding="16dp"
+        app:iconPadding="8dp"
+        app:iconGravity="textStart" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button_trip_map"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="@string/text_button_map"/>
-
+        android:text="@string/text_button_map"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#2196F3"
+        android:cornerRadius="24dp"
+        android:elevation="4dp"
+        android:padding="16dp"
+        app:iconPadding="8dp"
+        app:iconGravity="textStart" />
 </LinearLayout>
