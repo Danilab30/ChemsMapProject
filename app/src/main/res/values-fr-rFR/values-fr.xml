@@ -19,4 +19,9 @@
     <string name="text_pressure">Pressione</string>
     <string name="text_humidity">Umidità</string>
     <string name="text_accept">OK</string>
+    <string name="text_open_list">Liste des voyages douverture</string>
+    <string name="text_open_form">Formulaire de voyage douverture</string>
+    <string name="text_open_map">Carte du voyage douverture</string>
+    <string name="text_marker_set">Définir lemplacement</string>
+    <string name="text_weather_error">Impossible dobtenir la météo</string>
 </resources>

@@ -19,5 +19,10 @@
     <string name="text_pressure">Presion</string>
     <string name="text_humidity">humedad</string>
     <string name="text_accept">OK</string>
+    <string name="text_open_list">Lista de viajes de apertura</string>
+    <string name="text_open_form">Formulario de viaje de apertura</string>
+    <string name="text_open_map">Abrir mapa de viaje</string>
+    <string name="text_marker_set">Establecer ubicación</string>
+    <string name="text_weather_error">No se pudo obtener el clima</string>
 
 </resources>
