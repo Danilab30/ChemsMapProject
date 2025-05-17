@@ -17,10 +17,9 @@
         android:text="@string/text_button_list"
         android:textColor="@android:color/white"
         android:backgroundTint="#2196F3"
-        android:cornerRadius="24dp"
+        app:cornerRadius="24dp"
         android:elevation="4dp"
-        android:padding="16dp"
-     />
+        android:padding="16dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_trip_form"
@@ -30,7 +29,7 @@
         android:text="@string/text_button_new"
         android:textColor="@android:color/white"
         android:backgroundTint="#2196F3"
-        android:cornerRadius="24dp"
+        app:cornerRadius="24dp"
         android:elevation="4dp"
         android:padding="16dp"
         app:iconPadding="8dp"
@@ -44,7 +43,7 @@
         android:text="@string/text_button_map"
         android:textColor="@android:color/white"
         android:backgroundTint="#2196F3"
-        android:cornerRadius="24dp"
+        app:cornerRadius="24dp"
         android:elevation="4dp"
         android:padding="16dp"
         app:iconPadding="8dp"
