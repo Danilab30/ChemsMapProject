@@ -6,17 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.Button
 import android.widget.TextView
 import mx.itson.cheemstour.R
 import mx.itson.cheemstour.entities.Trip
 
 class TripAdapter(
-    context : Context,
-    trips : List<Trip>
+    val context: Context,
+    val tripsList: List<Trip>,
+    val onUpdateClick: (Trip) -> Unit,
+    val onDeleteClick: (Trip) -> Unit
 ) : BaseAdapter() {
-
-    var context : Context = context
-    var tripsList : List<Trip> = trips
 
     override fun getCount(): Int {
         return tripsList.size
@@ -31,22 +31,20 @@ class TripAdapter(
     }
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        var elemento = LayoutInflater.from(context).inflate(R.layout.elem_trip, null)
-        try {
-            val trip = getItem(position) as Trip
+        val elemento = LayoutInflater.from(context).inflate(R.layout.elem_trip, null)
+        val trip = tripsList[position]
 
-            val txtName: TextView = elemento.findViewById(R.id.trip_name)
-            txtName.text = trip.name
+        elemento.findViewById<TextView>(R.id.trip_name).text = trip.name
+        elemento.findViewById<TextView>(R.id.trip_city).text = trip.city
+        elemento.findViewById<TextView>(R.id.trip_country).text = trip.country
 
-            val txtCity: TextView = elemento.findViewById(R.id.trip_city)
-            txtCity.text = trip.city
+        val btnUpdate = elemento.findViewById<Button>(R.id.btn_update)
+        val btnDelete = elemento.findViewById<Button>(R.id.btn_delete)
 
-            val txtCountry: TextView = elemento.findViewById(R.id.trip_country)
-            txtCountry.text = trip.country
+        btnUpdate.setOnClickListener { onUpdateClick(trip) }
+        btnDelete.setOnClickListener { onDeleteClick(trip) }
 
-        } catch(ex: Exception) {
-            Log.e("Error showing trips", ex.message.toString())
-        }
         return elemento
     }
+
 }

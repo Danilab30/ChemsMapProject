@@ -4,6 +4,7 @@ import mx.itson.cheemstour.entities.Trip
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.DELETE
 import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.PUT
@@ -17,5 +18,9 @@ interface CheemsAPI {
     @POST("trip")
     fun saveTrip(@Body trip: Trip): Call<Boolean>
 
+    @DELETE("trip/{id}")
+    fun deleteTrip(@Path("id") id: Int): Call<Void>
 
+    @PUT("trip/{id}")
+    fun updateTrip(@Path("id") id: Int, @Body trip: Trip): Call<Void>
 }
