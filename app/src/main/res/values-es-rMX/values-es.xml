@@ -24,5 +24,6 @@
     <string name="text_open_map">Abrir mapa de viaje</string>
     <string name="text_marker_set">Establecer ubicación</string>
     <string name="text_weather_error">No se pudo obtener el clima</string>
+    <string name="btn_save">Guardar</string>
 
 </resources>

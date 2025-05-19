@@ -24,4 +24,5 @@
     <string name="text_open_map">Opening trip map</string>
     <string name="text_marker_set">Set location</string>
     <string name="text_weather_error">Could not get weather</string>
+    <string name="btn_save">Save</string>
 </resources>

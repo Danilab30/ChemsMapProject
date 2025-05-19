@@ -48,6 +48,7 @@ class TripFormActivity : AppCompatActivity(), View.OnClickListener, OnMapReadyCa
             insets
         }
 
+
         val btnSave = findViewById<View>(R.id.button_save) as Button
         btnSave.setOnClickListener(this)
 
@@ -55,10 +56,12 @@ class TripFormActivity : AppCompatActivity(), View.OnClickListener, OnMapReadyCa
         city = findViewById(R.id.txt_city)
         country = findViewById(R.id.txt_country)
 
+
         var mapaFragment =
             supportFragmentManager.findFragmentById(R.id.map_form) as SupportMapFragment
         mapaFragment.getMapAsync(this)
     }
+
 
     override fun onClick(v: View?) {
         when (v?.id) {

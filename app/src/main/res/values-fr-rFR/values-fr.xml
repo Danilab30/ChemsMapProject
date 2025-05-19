@@ -24,4 +24,5 @@
     <string name="text_open_map">Carte du voyage douverture</string>
     <string name="text_marker_set">Définir lemplacement</string>
     <string name="text_weather_error">Impossible dobtenir la météo</string>
+    <string name="btn_save">Garder</string>
 </resources>
