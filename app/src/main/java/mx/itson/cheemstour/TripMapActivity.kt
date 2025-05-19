@@ -99,7 +99,7 @@ class TripMapActivity : AppCompatActivity(), OnMapReadyCallback {
         call.enqueue(object : Callback<Weather> { //ejecuta la petición
             override fun onResponse(call: Call<Weather>, response: Response<Weather>) {
                 val weather: Weather? = response.body()
-                //se obtiene el objeto Weather de la respuesta que la descripcion del clima, la temperatura se obtiene en kelvin
+                //se obtiene el objeto Weather de la respuesta que la descripcion del clima
 
                 if (weather != null) {
                     vibrate(300)
