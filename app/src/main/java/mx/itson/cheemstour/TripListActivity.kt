@@ -72,6 +72,8 @@ class TripListActivity : AppCompatActivity() {
                             intent.putExtra("trip_name", trip.name)
                             intent.putExtra("trip_city", trip.city)
                             intent.putExtra("trip_country", trip.country)
+                            intent.putExtra("trip_latitude", trip.latitude)
+                            intent.putExtra("trip_longitude", trip.longitude)
                             startActivity(intent)
                         },
                         onDeleteClick = { trip ->

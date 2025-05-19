@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Latitud"
                 android:padding="12dp"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal|numberSigned"/>
         </LinearLayout>
 
         <!-- Campo: Longitud -->
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Longitud"
                 android:padding="12dp"
-                android:inputType="numberDecimal"/>
+                android:inputType="numberDecimal|numberSigned"/>
         </LinearLayout>
 
         <!-- Botón Guardar -->

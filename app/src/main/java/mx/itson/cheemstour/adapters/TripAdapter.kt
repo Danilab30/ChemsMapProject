@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.TextView
 import mx.itson.cheemstour.R
 import mx.itson.cheemstour.entities.Trip
@@ -38,8 +39,8 @@ class TripAdapter(
         elemento.findViewById<TextView>(R.id.trip_city).text = trip.city
         elemento.findViewById<TextView>(R.id.trip_country).text = trip.country
 
-        val btnUpdate = elemento.findViewById<Button>(R.id.btn_update)
-        val btnDelete = elemento.findViewById<Button>(R.id.btn_delete)
+        val btnUpdate = elemento.findViewById<ImageButton>(R.id.btn_update)
+        val btnDelete = elemento.findViewById<ImageButton>(R.id.btn_delete)
 
         btnUpdate.setOnClickListener { onUpdateClick(trip) }
         btnDelete.setOnClickListener { onDeleteClick(trip) }
