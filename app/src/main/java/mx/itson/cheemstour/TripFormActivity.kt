@@ -97,7 +97,7 @@ class TripFormActivity : AppCompatActivity(), View.OnClickListener, OnMapReadyCa
                         Toast.makeText(context,getString(R.string.text_saved_error),Toast.LENGTH_LONG).show()
                     }
                 } else {
-                    Log.e("Error", "Failed to save trip: ${response.code()}")
+                    Log.e("Error", R.string.text_saved_error.toString() + " ${response.code()}")
                 }
             }
             override fun onFailure(call: Call<Boolean>, t: Throwable) {

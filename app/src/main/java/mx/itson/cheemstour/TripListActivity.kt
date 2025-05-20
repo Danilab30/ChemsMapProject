@@ -44,13 +44,13 @@ class TripListActivity : AppCompatActivity() {
         val call = RetrofitUtil.getApi()!!.deleteTrip(id)
         call.enqueue(object : Callback<Void> {
             override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                Toast.makeText(this@TripListActivity, "Eliminado correctamente", Toast.LENGTH_SHORT)
+                Toast.makeText(this@TripListActivity, getString(R.string.text_delete_successful), Toast.LENGTH_SHORT)
                     .show()
                 getTrips() // Recargar lista
             }
 
             override fun onFailure(call: Call<Void>, t: Throwable) {
-                Toast.makeText(this@TripListActivity, "Error al eliminar", Toast.LENGTH_SHORT)
+                Toast.makeText(this@TripListActivity, getString(R.string.text_delete_error), Toast.LENGTH_SHORT)
                     .show()
             }
         })
@@ -78,19 +78,19 @@ class TripListActivity : AppCompatActivity() {
                         },
                         onDeleteClick = { trip ->
                             AlertDialog.Builder(this@TripListActivity)
-                                .setTitle("Confirmar eliminación")
-                                .setMessage("¿Deseas eliminar el viaje \"${trip.name}\"?")
-                                .setPositiveButton("Sí") { _, _ ->
+                                .setTitle(getString(R.string.text_confirm_delete))
+                                .setMessage( getString(R.string.text_delete_question) + "\"${trip.name}\"?")
+                                .setPositiveButton(getString(R.string.text_yes)) { _, _ ->
                                     trip.id?.let { eliminarViaje(it) }
                                 }
-                                .setNegativeButton("No", null)
+                                .setNegativeButton(getString(R.string.text_no), null)
                                 .show()
                         }
                     )
                 } else {
                     Toast.makeText(
                         this@TripListActivity,
-                        "Error en la respuesta del servidor",
+                        getString(R.string.text_server_error),
                         Toast.LENGTH_SHORT
                     ).show()
                     Log.e("API", "Error: ${response.code()} ${response.errorBody()?.string()}")
@@ -98,10 +98,10 @@ class TripListActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Trip>>, t: Throwable) {
-                Log.e("API", "Falló la llamada: ${t.message}")
+                Log.e("API", getString(R.string.text_api_failed) + " ${t.message}")
                 Toast.makeText(
                     this@TripListActivity,
-                    "Error al conectar con el servidor",
+                    getString(R.string.text_server_connection_failed),
                     Toast.LENGTH_SHORT
                 ).show()
             }

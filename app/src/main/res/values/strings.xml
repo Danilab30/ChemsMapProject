@@ -6,6 +6,10 @@
     <string name="text_save">Save</string>
     <string name="text_saved_successful">Trip saved successfully</string>
     <string name="text_saved_error">Error saving trip</string>
+    <string name="text_update_successful">Trip updated successfully</string>
+    <string name="text_update_error">Error updating trip</string>
+    <string name="text_delete_successful">Trip deleted successfully</string>"
+    <string name="text_delete_error">Error deleting trip</string>
     <string name="text_button_list">Trips list</string>
     <string name="text_button_new">New Trip</string>
     <string name="text_button_map">Map Trip</string>
@@ -24,5 +28,17 @@
     <string name="text_open_map">Opening trip map</string>
     <string name="text_marker_set">Set location</string>
     <string name="text_weather_error">Could not get weather</string>
-    <string name="btn_save">Save</string>
+    <string name="text_update">Update</string>
+    <string name="text_delete">Delete</string>
+    <string name="text_traveler_cheems">Traveler Cheems</string>
+    <string name="text_latitude">Latitude</string>
+    <string name="text_longitude">Longitude</string>
+    <string name="text_server_error">Error in server response</string>
+    <string name="text_confirm_delete">Confirm delete</string>
+    <string name="text_delete_question">You want to delete the trip </string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <string name="text_api_failed">Call failed</string>
+    <string name="text_server_connection_failed">Error connecting to server</string>
+
 </resources>

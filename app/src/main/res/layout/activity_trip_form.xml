@@ -34,7 +34,7 @@
                 android:layout_toEndOf="@id/icon_name"
                 android:layout_marginStart="12dp"
                 android:padding="12dp"
-                android:hint="Nombre"
+                android:hint="@string/text_name"
                 android:inputType="textPersonName" />
         </RelativeLayout>
 
@@ -60,7 +60,7 @@
                 android:layout_toEndOf="@id/icon_city"
                 android:layout_marginStart="12dp"
                 android:padding="12dp"
-                android:hint="Ciudad"
+                android:hint="@string/text_city"
                 android:inputType="textCapWords" />
         </RelativeLayout>
 
@@ -86,7 +86,7 @@
                 android:layout_toEndOf="@id/icon_country"
                 android:layout_marginStart="12dp"
                 android:padding="12dp"
-                android:hint="País"
+                android:hint="@string/text_country"
                 android:inputType="textCapWords" />
         </RelativeLayout>
 
@@ -110,7 +110,7 @@
             android:id="@+id/button_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Guardar"
+            android:text="@string/text_save"
             android:backgroundTint="#2196F3"
             android:textColor="@android:color/white"
             android:elevation="6dp"

@@ -53,12 +53,12 @@ class EditTripActivity : AppCompatActivity() {
             RetrofitUtil.getApi()?.updateTrip(tripId, updatedTrip)
                 ?.enqueue(object : Callback<Void> {
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                        Toast.makeText(this@EditTripActivity, "Actualizado correctamente", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@EditTripActivity, R.string.text_update_successful, Toast.LENGTH_SHORT).show()
                         finish()
                     }
 
                     override fun onFailure(call: Call<Void>, t: Throwable) {
-                        Toast.makeText(this@EditTripActivity, "Error al actualizar", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@EditTripActivity, R.string.text_update_error, Toast.LENGTH_SHORT).show()
                     }
                 })
         }

@@ -6,6 +6,10 @@
     <string name="text_save">Salva</string>
     <string name="text_saved_successful">Viaggio salvato con successo</string>
     <string name="text_saved_error">Errore durante il salvataggio del viaggio</string>
+    <string name="text_update_successful">Viaggio aggiornato con successo</string>
+    <string name="text_update_error">Errore durante l\'aggiornamento del viaggio</string>
+    <string name="text_delete_successful">Viaggio eliminato con successo</string>
+    <string name="text_delete_error">Errore durante l\'eliminazione del viaggio</string>
     <string name="text_button_list">Elenco viaggi</string>
     <string name="text_button_new">nuovo viaggio</string>
     <string name="text_button_map">Viaggio sulla mappa</string>
@@ -24,5 +28,16 @@
     <string name="text_open_map">Apertura della mappa di viaggio</string>
     <string name="text_marker_set">Imposta la posizione</string>
     <string name="text_weather_error">Impossibile ottenere il meteo</string>
-    <string name="btn_save">Mantenere</string>
+    <string name="text_update">Aggiorna</string>
+    <string name="text_delete">Elimina</string>
+    <string name="text_traveler_cheems">Viaggiatore Cheems</string>
+    <string name="text_latitude">Latitudine</string>
+    <string name="text_longitude">Longitudine</string>
+    <string name="text_server_error">Errore nella risposta del server</string>
+    <string name="text_confirm_delete">Conferma eliminazione</string>
+    <string name="text_delete_question">Vuoi eliminare il viaggio </string>
+    <string name="text_yes">Sì</string>
+    <string name="text_no">No</string>
+    <string name="text_api_failed">Chiamata fallita</string>
+    <string name="text_server_connection_failed">Errore di connessione al server</string>
 </resources>

@@ -6,6 +6,10 @@
     <string name="text_save">Sauvegarder</string>
     <string name="text_saved_successful">Voyage enregistré avec succès</string>
     <string name="text_saved_error">Erreur lors de lenregistrement du voyag</string>
+    <string name="text_update_successful">Voyage mis à jour avec succès</string>
+    <string name="text_update_error">Erreur lors de la mise à jour du voyage</string>
+    <string name="text_delete_successful">Voyage supprimé avec succès</string>
+    <string name="text_delete_error">Erreur lors de la suppression du voyage</string>
     <string name="text_button_list">Liste des voyages</string>
     <string name="text_button_new">Nouveau voyage</string>
     <string name="text_button_map">Carte Voyage</string>
@@ -24,5 +28,16 @@
     <string name="text_open_map">Carte du voyage douverture</string>
     <string name="text_marker_set">Définir lemplacement</string>
     <string name="text_weather_error">Impossible dobtenir la météo</string>
-    <string name="btn_save">Garder</string>
+    <string name="text_update">Mettre à jour</string>
+    <string name="text_delete">Supprimer</string>
+    <string name="text_traveler_cheems">Voyageur Cheems</string>
+    <string name="text_latitude">Latitude</string>
+    <string name="text_longitude">Longitude</string>
+    <string name="text_server_error">Erreur dans la réponse du serveur</string>
+    <string name="text_confirm_delete">Confirmer la suppression</string>
+    <string name="text_delete_question">Voulez-vous supprimer le voyage </string>
+    <string name="text_yes">Oui</string>
+    <string name="text_no">Non</string>
+    <string name="text_api_failed">Échec de l\'appel</string>
+    <string name="text_server_connection_failed">Erreur de connexion au serveur</string>
 </resources>

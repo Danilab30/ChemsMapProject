@@ -47,7 +47,7 @@
             android:layout_height="40dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_editar"
-            android:contentDescription="Actualizar"
+            android:contentDescription="@string/text_update"
             android:scaleType="centerInside"
              />
 
@@ -57,7 +57,7 @@
             android:layout_height="40dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_eliminar"
-            android:contentDescription="Eliminar"
+            android:contentDescription="@string/text_delete"
             android:scaleType="centerInside"
              />
 

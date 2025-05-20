@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Campo: Nombre -->
+        <!-- Nombre -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,11 +29,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:hint="Nombre"
+                android:hint="@string/text_name"
                 android:padding="12dp"/>
         </LinearLayout>
 
-        <!-- Campo: Ciudad -->
+        <!-- Ciudad -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,11 +52,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:hint="Ciudad"
+                android:hint="@string/text_city"
                 android:padding="12dp"/>
         </LinearLayout>
 
-        <!-- Campo: País -->
+        <!-- País -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,11 +75,11 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:hint="País"
+                android:hint="@string/text_country"
                 android:padding="12dp"/>
         </LinearLayout>
 
-        <!-- Campo: Latitud -->
+        <!-- Latitud -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -98,12 +98,12 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:hint="Latitud"
+                android:hint="@string/text_latitude"
                 android:padding="12dp"
                 android:inputType="numberDecimal|numberSigned"/>
         </LinearLayout>
 
-        <!-- Campo: Longitud -->
+        <!-- Longitud -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,17 +122,17 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:hint="Longitud"
+                android:hint="@string/text_longitude"
                 android:padding="12dp"
                 android:inputType="numberDecimal|numberSigned"/>
         </LinearLayout>
 
-        <!-- Botón Guardar -->
+        <!-- Guardar -->
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btn_save"
+            android:text="@string/text_save"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             android:padding="14dp"
@@ -145,7 +145,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:contentDescription="Cheems viajero"
+            android:contentDescription="@string/text_traveler_cheems"
             android:src="@drawable/cheems_viajero" />
 
     </LinearLayout>
