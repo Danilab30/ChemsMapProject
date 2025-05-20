@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp"
-    android:background="#F8F8F8">
+    android:background="@drawable/cheems_fondo"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -140,13 +141,7 @@
             android:drawablePadding="8dp"
             android:backgroundTint="#2196F3" />
 
-        <!-- Imagen de Cheems Viajero  -->
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:contentDescription="@string/text_traveler_cheems"
-            android:src="@drawable/cheems_viajero" />
+
 
     </LinearLayout>
 </ScrollView>

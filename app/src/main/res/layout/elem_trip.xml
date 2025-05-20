@@ -43,8 +43,8 @@
 
         <ImageButton
             android:id="@+id/btn_update"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_editar"
             android:contentDescription="@string/text_update"
@@ -53,8 +53,8 @@
 
         <ImageButton
             android:id="@+id/btn_delete"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_eliminar"
             android:contentDescription="@string/text_delete"
